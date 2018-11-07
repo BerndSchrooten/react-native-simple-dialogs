@@ -27,6 +27,7 @@ import {
     Modal,
     View,
     ViewPropTypes,
+    ScrollView,
     TouchableWithoutFeedback,
     Text,
     Platform
@@ -130,7 +131,7 @@ class Dialog extends Component {
 
                     {this._renderOutsideTouchable(onTouchOutside)}
 
-                    <View style={[{
+                    <ScrollView style={[{
                         backgroundColor: dialogBackgroundColor,
                         width: '100%',
                         shadowOpacity: 0.24,
@@ -139,7 +140,8 @@ class Dialog extends Component {
                         shadowOffset: {
                             height: 4,
                             width: 2
-                        }
+                        },
+                        maxHeight: '90%'
                     }, dialogStyle]}>
 
                         {this.renderTitle()}
@@ -148,7 +150,7 @@ class Dialog extends Component {
 
                         {this.renderButtons()}
 
-                    </View>
+                    </ScrollView>
 
                     {this._renderOutsideTouchable(onTouchOutside)}
 
