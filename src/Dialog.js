@@ -191,12 +191,12 @@ Dialog.propTypes = {
   overlayStyle: ViewPropTypes.style,
   buttons: PropTypes.element,
   visible: PropTypes.bool,
-  animationType: Modal.propTypes.animationType,
+  animationType: PropTypes.any,
   onRequestClose: PropTypes.func,
   onShow: PropTypes.func,
-  onOrientationChange: Modal.propTypes.onOrientationChange,
+  onOrientationChange: PropTypes.any,
   onTouchOutside: PropTypes.func,
-  supportedOrientations: Modal.propTypes.supportedOrientations,
+  supportedOrientations: PropTypes.any,
   title: PropTypes.string,
   titleStyle: Text.propTypes.style
 };
